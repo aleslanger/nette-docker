@@ -20,3 +20,6 @@ sh up.sh
 sh down.sh
 ```
 
+```
+http://localhost:1080
+```
