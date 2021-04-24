@@ -109,4 +109,19 @@ RUN pecl install -o -f redis \
 	&&  rm -rf /tmp/pear \
 	&&  echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
 
+#xdebug
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
+
+
+
+
+# INSTALL COMPOSER
+#RUN curl -s https://getcomposer.org/installer | php
+RUN alias composer='php composer.phar'
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+
+
 
