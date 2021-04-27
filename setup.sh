@@ -23,12 +23,12 @@ Build() {
 }
 
 Install() {
-  docker-compose -f docker-compose.yml exec php bash -c 'composer install'
+  winpty docker exec -it php bash -c 'composer install'
 
 }
 
 Update() {
-  docker-compose -f docker-compose.yml exec php bash -c 'composer update'
+  winpty docker exec -it php bash -c 'composer update'
 
 }
 
